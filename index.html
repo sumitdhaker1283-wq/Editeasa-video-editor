@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EditEase Studio — Live</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar"><div class="brand">EditEase Studio — Live</div></header>
+    <main class="container">
+      <section class="left">
+        <h2>Preview & Transport</h2>
+        <video id="video" controls crossorigin="anonymous" style="max-width:100%;display:block"></video>
+        <div class="controls-row">
+          <input id="fileInput" type="file" accept="video/*" />
+          <button id="uploadBtn" class="btn">Upload to Server</button>
+          <span id="uploadedName" class="muted"></span>
+        </div>
+        <div style="margin-top:10px;">
+          <button id="genThumbsBtn" class="btn">Generate Thumbnails</button>
+          <button id="addSplitBtn" class="btn">Add Split @ Current Time</button>
+          <button id="splitServerBtn" class="btn">Split on Server</button>
+          <button id="concatBtn" class="btn">Concat Segments</button>
+        </div>
+        <div class="info">
+          <h3>Status</h3>
+          <pre id="status" class="status"></pre>
+        </div>
+      </section>
+      <aside class="right">
+        <h3>Thumbnails (server)</h3>
+        <div id="thumbsContainer" class="thumbs"></div>
+        <h3>Split Markers (local)</h3>
+        <ol id="splitList"></ol>
+        <h3>Segments (server)</h3>
+        <ul id="segmentsList"></ul>
+      </aside>
+    </main>
+    <footer class="footer">EditEase Studio — Live</footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
