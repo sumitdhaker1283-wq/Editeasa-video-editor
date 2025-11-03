@@ -170,3 +170,8 @@ app.get('/health', (req,res)=> res.json({ ok: true, ts: Date.now() }));
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, ()=> console.log('Server running on port', PORT));
+// ❌ galat (local)
+fetch("http://localhost:3000/api/videos")
+
+// ✅ sahi (Render backend)
+fetch("https://video-editor-backend.onrender.com/api/videos")
